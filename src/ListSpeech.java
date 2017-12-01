@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.Random;
 import java.util.Vector;
@@ -30,12 +31,6 @@ public class ListSpeech {
 	 */
 	AudioPlayer audioPlayer;
 
-	/**
-	 * Total number of speech files
-	 * This number corresponds to the number of files in the speech/stimuli folder
-	 */
-	int numSpeechFilesPm;
-	int numSpeechFilesPf;
 
 	/**
 	 * Folders with the speech of the different parts of the test
@@ -101,17 +96,21 @@ public class ListSpeech {
 		folderPm= new File(System.getProperty("user.home")+"\\Desktop\\GUI_SpeakerCharacteristics\\speech\\males");
 		folderPf= new File(System.getProperty("user.home")+"\\Desktop\\GUI_SpeakerCharacteristics\\speech\\females");
 
-		// check valid folders and fill in stimuliPm and stimuliPf with the contents
+		// check valid folders and fill in stimuliPm and stimuliPf with the contents (wav files only)
 		if(folderPm.isDirectory() && folderPf.isDirectory()){ 
-
-			numSpeechFilesPm=folderPm.listFiles().length;  
-			numSpeechFilesPf=folderPf.listFiles().length;  
-
-			stimuliPm= new File[numSpeechFilesPm];
-			stimuliPm=folderPm.listFiles();
-
-			stimuliPf= new File[numSpeechFilesPf];
-			stimuliPf=folderPf.listFiles();
+			
+			stimuliPm = folderPm.listFiles(new FilenameFilter() {
+			    public boolean accept(File dir, String name) {
+			        return name.toLowerCase().endsWith(".wav"); 
+			    }
+			});
+			
+			stimuliPf = folderPf.listFiles(new FilenameFilter() {
+			    public boolean accept(File dir, String name) {
+			        return name.toLowerCase().endsWith(".wav"); 
+			    }
+			});
+			
 
 		}else{
 			System.out.println("One or more stimuli folder not valid");
