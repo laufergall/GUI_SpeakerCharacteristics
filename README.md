@@ -1,3 +1,5 @@
+# GUI_SpeakerCharacteristics
+
 Listening test GUI to label speech files (generally wav, monospeaker) according to perceived speaker characteristics, such as likable, attractive, competent, childish, etc. Labels and pop ups for the listener are writen in German.
 
 A semantic-differential questionnaire of 34 items is presented to the test participants. Each item consists on a pair of antonyms related to a speaker characteritic (e.g. likable / non-likable, insecure / secure,..). For each stimulus file, the listener is asked to select a value on continuous sliders corresponding to each questionnaire item. The stimuli are taken from a given folder and are randomly played.
