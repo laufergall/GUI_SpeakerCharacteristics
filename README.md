@@ -6,8 +6,9 @@ A semantic-differential questionnaire of 34 items is presented to the test parti
 
 The folder structure "GUI_SpeakerCharacteristics" needs to be copied to the Desktop. Speech test stimulus files are to be placed in the corresponding male or female folder.
 
-This questionnaire was used to label the Nautilus Speaker Characterization (NSC) Corpus: 
-http://www.qu.tu-berlin.de/?id=nsc-corpus
+This questionnaire was used to label the [Nautilus Speaker Characterization (NSC) Corpus](http://www.qu.tu-berlin.de/?id=nsc-corpus).
+
+More information about the questionnaire items in: 
 
 Fernández Gallardo, L. and Weiss, B., "The Nautilus Speaker Characterization Corpus: Speech Recordings and Labels of Speaker Characteristics and Voice Descriptions," submitted to International Conference on Language Resources and Evaluation (LREC), 2018.
 
