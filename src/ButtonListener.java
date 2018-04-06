@@ -162,7 +162,7 @@ public class ButtonListener implements ActionListener {
 
 		try {
 
-			Path fileOutput = Paths.get(System.getProperty("user.home")+"\\Desktop\\GUI_SpeakerCharacteristics\\output\\output_GUI_SpeakerCharacteristics_"+ interf.nameListener + ".csv");
+			Path fileOutput = Paths.get("files\\output\\output_GUI_SpeakerCharacteristics_"+ interf.nameListener + ".csv");
 			Files.write(fileOutput, str2.getBytes(), StandardOpenOption.APPEND);
 
 		}catch (IOException e) {

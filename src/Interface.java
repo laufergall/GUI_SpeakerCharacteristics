@@ -192,7 +192,7 @@ public class Interface extends JFrame {
 
 		// Icon
 		image = new JLabel();
-		ImageIcon icon = new ImageIcon(System.getProperty("user.home")+"\\Desktop\\GUI_SpeakerCharacteristics\\images\\Loudspeaker.png");
+		ImageIcon icon = new ImageIcon("files\\images\\Loudspeaker.png");
 		image.setIcon(icon);
 		image.setVisible(false); // only display while playing stimuli
 
@@ -465,7 +465,7 @@ public class Interface extends JFrame {
 
 		try {
 
-			Path fileOutput = Paths.get(System.getProperty("user.home")+"\\Desktop\\GUI_SpeakerCharacteristics\\output\\output_GUI_SpeakerCharacteristics_"+ nameListener + ".csv");
+			Path fileOutput = Paths.get("files\\output\\output_GUI_SpeakerCharacteristics_"+ nameListener + ".csv");
 			Files.write(fileOutput, str.getBytes(), StandardOpenOption.CREATE_NEW);
 
 		}catch (IOException e) {

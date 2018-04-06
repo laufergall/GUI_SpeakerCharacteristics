@@ -62,7 +62,7 @@ public class MainClass {
 				PrintStream out = null;
 				try {
 
-					File fileOut = new File(System.getProperty("user.home")+"\\Desktop\\GUI_SpeakerCharacteristics\\output\\Log_GUI_SpeakerCharacteristics_" + nameListener+ ".txt");
+					File fileOut = new File("files\\output\\Log_GUI_SpeakerCharacteristics_" + nameListener+ ".txt");
 					if (!fileOut.exists()) fileOut.getParentFile().mkdirs();
 					fileOut.createNewFile(); // if file already exists will do nothing 
 

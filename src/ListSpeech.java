@@ -93,8 +93,8 @@ public class ListSpeech {
 
 		audioPlayer= new AudioPlayer(this);
 
-		folderPm= new File(System.getProperty("user.home")+"\\Desktop\\GUI_SpeakerCharacteristics\\speech\\males");
-		folderPf= new File(System.getProperty("user.home")+"\\Desktop\\GUI_SpeakerCharacteristics\\speech\\females");
+		folderPm= new File("files\\speech\\males");
+		folderPf= new File("files\\speech\\females");
 
 		// check valid folders and fill in stimuliPm and stimuliPf with the contents (wav files only)
 		if(folderPm.isDirectory() && folderPf.isDirectory()){ 
